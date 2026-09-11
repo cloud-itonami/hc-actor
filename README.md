@@ -3,7 +3,7 @@
 **名乗り**: `hc` は Human Computing（スキマバイト + マイクロタスク）プラットフォームの
 略である。ただし**この repo にプラットフォームは入っていない**。ここに在るのは、
 そのアクターの **純粋な `.cljc` 計画境界 1 本だけ** —— `hc.murakumo`
-（`src/hc/murakumo.cljc`）。
+（`src/hc/murakumo.cljk`）。
 
 **この repo にシフトを作るコードも、タスクを配るコードも、労働基準法を検査する
 コードも無い。** ネットワークに触る関数も、DB に触る関数も、Matrix に投稿する関数も
@@ -15,8 +15,8 @@
 
 | path | 何か |
 |---|---|
-| `src/hc/murakumo.cljc` | 唯一の実装。下記の計画境界 |
-| `test/hc/murakumo_test.cljc` | その契約テスト（9 tests / 239 assertions） |
+| `src/hc/murakumo.cljk` | 唯一の実装。下記の計画境界 |
+| `test/hc/murakumo_test.cljk` | その契約テスト（9 tests / 239 assertions） |
 | `deps.edn` | `:test`（cognitect test-runner）/ `:lint`（clj-kondo） |
 | `actor-manifest.jsonld` | アクター identity + pipeline + governance の宣言 |
 | `.well-known/did.json` | 公開 DID 文書 |
@@ -146,7 +146,7 @@ attestation が 1 つも無いとき、17 cell すべてが `:status :blocked` �
 
 `.well-known/did.json` が公開しているのは 1 行目（解決する方）。
 
-⚠ **一方 `src/hc/murakumo.cljc` の `actor-did` は 2 行目**
+⚠ **一方 `src/hc/murakumo.cljk` の `actor-did` は 2 行目**
 （`did:web:hc.etzhayyim.com`）**を持っており、そのホストには DNS レコードが無い。**
 `actor-manifest.jsonld` の `@id` と CLAUDE.md の URL も同じ 2 行目を使っている。
 つまり **生成される全 effect の `:actor` は、解決しない DID を名乗る。**
