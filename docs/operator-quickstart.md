@@ -34,7 +34,7 @@ cd hc-actor
 ## 2. テストを走らせる
 
 ```bash
-clojure -M:test
+kbb -M:test
 ```
 
 ```
@@ -51,7 +51,7 @@ Ran 9 tests containing 239 assertions.
 ## 3. lint
 
 ```bash
-clojure -M:lint
+kbb -M:lint
 ```
 
 ```
@@ -73,7 +73,7 @@ error が増えている**ので、その差分を見ること。
 **それを信じずに、その場で両方向を出す。**
 
 ```bash
-nbb --classpath src -e '
+kbb --backend sci --classpath src -e '
 (ns probe (:require [hc.murakumo :as m]))
 (let [all (into {} (map (fn [g] [g true]) m/common-gates))
       one-short (dissoc all (first m/common-gates))]
@@ -136,7 +136,7 @@ README は「17 cell は `actor-manifest.jsonld` の宣言から導かれてい�
 **その対応をコードと manifest の両側から数え直す。**
 
 ```bash
-nbb --classpath src -e '
+kbb --backend sci --classpath src -e '
 (ns v (:require ["fs" :as fs] [hc.murakumo :as m]))
 (def j (js->clj (js/JSON.parse (fs/readFileSync "actor-manifest.jsonld" "utf8"))))
 (defn last-seg [s] (last (.split s ".")))
