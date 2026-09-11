@@ -55,7 +55,7 @@ clojure -M:lint
 ```
 
 ```
-src/hc/murakumo.cljc:173:14: warning: unused binding input
+src/hc/murakumo.cljk:173:14: warning: unused binding input
 linting took <N>ms, errors: 0, warnings: 1
 ```
 
@@ -127,7 +127,7 @@ https://etzhayyim.github.io/com-etzhayyim-hc/did.json      404
 ```
 
 `dig` が**何も返さない**のが現時点の期待値である（レコードが無い）。ここに IP が
-出るようになったら、`src/hc/murakumo.cljc` の `actor-did` と CLAUDE.md の API URL が
+出るようになったら、`src/hc/murakumo.cljk` の `actor-did` と CLAUDE.md の API URL が
 指す先が実在し始めたということなので、README の Identity 節を測り直すこと。
 
 ## 6. cell が manifest と一致していることを確かめる（JVM 不要）
