@@ -1,7 +1,7 @@
 # Operator quickstart
 
 **ここに載っているコマンドは、2026-09-06 に実際に実行したものだけである。** 出力は
-貼った時点の実測値。踏めなかった手順は載せていない（CLAUDE.md にある
+貼った時点の実測値。踏めなかった手順は載せていない（AGENTS.md にある
 `pnpm build` / `etzhayyim build` / `etzhayyim deploy` は、その対象ファイルが
 この repo に無いので**ここでは踏めない**。理由は [README](../README.md) の
 「この repo に**無い**もの」を参照）。
@@ -127,7 +127,7 @@ https://etzhayyim.github.io/com-etzhayyim-hc/did.json      404
 ```
 
 `dig` が**何も返さない**のが現時点の期待値である（レコードが無い）。ここに IP が
-出るようになったら、`src/hc/murakumo.cljk` の `actor-did` と CLAUDE.md の API URL が
+出るようになったら、`src/hc/murakumo.cljk` の `actor-did` と AGENTS.md の API URL が
 指す先が実在し始めたということなので、README の Identity 節を測り直すこと。
 
 ## 6. cell が manifest と一致していることを確かめる（JVM 不要）
@@ -169,7 +169,7 @@ only in code     : ()
 
 ## 踏めないもの（なぜ載っていないか）
 
-| CLAUDE.md のコマンド | ここで踏めない理由 |
+| AGENTS.md のコマンド | ここで踏めない理由 |
 |---|---|
 | `cd wasm/etzhayyim-wasm-hc-hc0mp7ng/svelte` | `wasm/` がこの repo に無い |
 | `pnpm install && pnpm build` | `package.json` がこの repo に無い |

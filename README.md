@@ -21,16 +21,16 @@
 | `actor-manifest.jsonld` | アクター identity + pipeline + governance の宣言 |
 | `.well-known/did.json` | 公開 DID 文書 |
 | `storage-profile.edn` | ストレージ profile の宣言 |
-| `CLAUDE.md` | **この repo ではなく上流デプロイの説明**（下記） |
+| `AGENTS.md` | **この repo ではなく上流デプロイの説明**（下記） |
 | `NOTICE` | Apache-2.0 + etzhayyim Charter Rider v3.1 |
 | `README.md` | この文書 |
 | `docs/operator-quickstart.md` | 実際に踏んだ手順 |
 
 これに `.gitignore` と `.nojekyll` を足して、ファイルは全部で 12 個である。
 
-## この repo に**無い**もの —— CLAUDE.md の読み方
+## この repo に**無い**もの —— AGENTS.md の読み方
 
-`CLAUDE.md`（11,932 バイト）は SvelteKit の SuperApp・XRPC gateway・Matrix
+`AGENTS.md`（11,932 バイト）は SvelteKit の SuperApp・XRPC gateway・Matrix
 protocol 連携・Arrow テーブル 8 本・労働基準法の自動検査・13 locale の契約書・
 OEM サービスプロバイダ登録パイプラインを説明している。**それらの実装は 1 行もここに
 無い。** 参照されている path を引くと次のようになる（2026-09-06 実測）:
@@ -43,7 +43,7 @@ wasm/etzhayyim-wasm-hc-hc0mp7ng/svelte/src/lib/legal/contracts.ts   MISSING
 package.json                                                        MISSING
 ```
 
-したがって CLAUDE.md の「Build & Deploy」節はここでは踏めない:
+したがって AGENTS.md の「Build & Deploy」節はここでは踏めない:
 
 ```bash
 cd wasm/etzhayyim-wasm-hc-hc0mp7ng/svelte   # ← このディレクトリが無い
@@ -55,7 +55,7 @@ etzhayyim deploy --smoke-url https://hc0mp7ng.etzhayyim.com/health
 `etzhayyim` はこのマシンにコマンドとして存在せず、smoke URL のホスト
 `hc0mp7ng.etzhayyim.com` は **NXDOMAIN**（`dig +short` が何も返さない）。
 
-CLAUDE.md が記述しているのは上流モノレポ（`etzhayyimcojp/20-actors` から
+AGENTS.md が記述しているのは上流モノレポ（`etzhayyimcojp/20-actors` から
 2026-05-21 に移設、`NOTICE` 参照）に在るデプロイであって、この repo の中身では
 ない。**ここで踏める手順は [`docs/operator-quickstart.md`](docs/operator-quickstart.md)
 が正本。**
@@ -148,7 +148,7 @@ attestation が 1 つも無いとき、17 cell すべてが `:status :blocked` �
 
 ⚠ **一方 `src/hc/murakumo.cljk` の `actor-did` は 2 行目**
 （`did:web:hc.etzhayyim.com`）**を持っており、そのホストには DNS レコードが無い。**
-`actor-manifest.jsonld` の `@id` と CLAUDE.md の URL も同じ 2 行目を使っている。
+`actor-manifest.jsonld` の `@id` と AGENTS.md の URL も同じ 2 行目を使っている。
 つまり **生成される全 effect の `:actor` は、解決しない DID を名乗る。**
 
 さらに、解決する方の DID 文書も、この repo の `.well-known/did.json` と**同一では
